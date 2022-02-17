@@ -25,8 +25,6 @@ table {
   font-family:Arial,sans-serif;
   font-size: $font-size-standard;
   line-height: $line-height-standard;
-
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 tr td {
@@ -66,10 +64,6 @@ tr:nth-child(1) td {
     line-height: $line-height-standard;
   }
 }
-
-// tr:nth-child(3) td {
-  
-// }
 
 body {
   margin: 0;
