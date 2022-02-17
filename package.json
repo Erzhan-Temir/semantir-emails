@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp watch",
+    "start": "gulp",
     "build": "gulp build",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
@@ -22,8 +22,8 @@
     "gulp-clean-css": "4.3.0",
     "gulp-file-include": "2.3.0",
     "gulp-group-css-media-queries": "1.2.2",
-    "gulp-htmlmin": "5.0.1",
     "gulp-imagemin": "7.1.0",
+    "gulp-inline-css": "4.0.0",
     "gulp-newer": "1.4.0",
     "gulp-plumber": "1.2.1",
     "gulp-rename": "2.0.0",

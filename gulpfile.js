@@ -10,9 +10,9 @@ const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
 const { src, dest } = require('gulp');
 const browserSyncModule = require('browser-sync').create();
+const inlineCss = require('gulp-inline-css');
 
 const projectFolder = 'build';
 const sourceFolder = 'src';
@@ -46,7 +46,7 @@ const browserSyncTask = function () {
     server: {
       baseDir: './' + projectFolder + '/',
     },
-    port: 3000,
+    port: 3300,
     notify: false,
   });
 };
@@ -59,7 +59,7 @@ const htmlTask = function () {
         basepath: '@file',
       }),
     )
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(inlineCss())
     .pipe(dest(path.build.html))
     .pipe(browserSyncModule.stream());
 };
@@ -95,7 +95,7 @@ const cssTask = function () {
     )
     .pipe(cleanCss())
     .pipe(rename('style.css'))
-    .pipe(dest(path.build.css))
+    .pipe(dest(sourceFolder))
     .pipe(browserSyncModule.stream());
 };
 
