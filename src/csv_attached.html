@@ -14,13 +14,19 @@
 
     <!-- Copy from here -->
     <table role="presentation">
-      @@include('./blocks/greeting.html', {"name": "there"})
       <tr>
-        <td>
-          We prepared your product descriptions. Find attached csv below.
+        <td align="center">
+          <table role="presentation">
+            @@include('./blocks/greeting.html', {"name": "there"})
+            <tr>
+              <td>
+                We prepared your product descriptions. Find attached csv below.
+              </td>
+            </tr>
+            @@include('./blocks/closing.html')
+          </table>
         </td>
-      </tr>
-      @@include('./blocks/closing.html')
+      </tr>      
     </table>
     <!-- Copy end -->
 

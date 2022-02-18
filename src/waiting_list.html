@@ -14,13 +14,19 @@
 
     <!-- Copy from here -->
     <table role="presentation">
-      @@include('./blocks/greeting.html', {"name": "there"})
       <tr>
-        <td>
-          Thank you for joining our waiting list. We are working hard to deploy our product into production.As soon as the product will be ready, we will send you a notification.
+        <td align="center">
+          <table role="presentation">
+            @@include('./blocks/greeting.html', {"name": "there"})
+            <tr>
+              <td>
+                Thank you for joining our waiting list. We are working hard to deploy our product into production.As soon as the product will be ready, we will send you a notification.
+              </td>
+            </tr>
+            @@include('./blocks/closing.html')
+          </table>
         </td>
-      </tr>
-      @@include('./blocks/closing.html')
+      </tr>      
     </table>
     <!-- Copy end -->
 

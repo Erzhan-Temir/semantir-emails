@@ -14,13 +14,19 @@
 
     <!-- Copy from here -->
     <table role="presentation">
-      @@include('./blocks/greeting.html', {"name": "there"})
       <tr>
-        <td>
-          We are sorry to see you leave. Please send your respond to this email to let us know how we can get better.
+        <td align="center">
+          <table role="presentation">
+            @@include('./blocks/greeting.html', {"name": "there"})
+            <tr>
+              <td>
+                We are sorry to see you leave. Please send your respond to this email to let us know how we can get better.
+              </td>
+            </tr>
+            @@include('./blocks/closing.html')
+          </table>
         </td>
-      </tr>
-      @@include('./blocks/closing.html')
+      </tr>      
     </table>
     <!-- Copy end -->
 
